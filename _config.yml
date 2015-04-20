@@ -1,6 +1,6 @@
 # Site settings
 title: MisterTofu
-email: tebesu@gmail.com
+email: tebesu at gmail.com
 description:
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://mistertofu.github.io/" # the base hostname & protocol for your site
