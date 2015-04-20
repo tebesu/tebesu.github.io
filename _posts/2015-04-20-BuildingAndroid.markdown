@@ -4,7 +4,7 @@ title:  Building Android on Mac
 date:   2015-04-20 13:09:39
 categories: android
 tags:
-permalink: /:categories/:title.html
+permalink: /posts/building_android_on_mac
 published: true
 ---
 
