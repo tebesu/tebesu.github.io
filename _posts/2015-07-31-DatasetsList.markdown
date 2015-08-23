@@ -1,32 +1,39 @@
 ---
 layout: post
-title:  Datasets List
+title:  Datasets
 date:   2015-07-31 10:53:05
 categories:
 tags:
-permalink: /posts/DatasetsList
+permalink: /posts/datasets
 published: true
 ---
 
-#List of Useful Datasets
-Below I listed some useful datasets used in research papers. I hope to expand this to be more comprehensive and up to date.
+
+Here I list some useful datasets commonly used in research papers. Comment below to get your dataset added.
+
+***-- Last updated August 23 2015***
 
 
-Know of a useful dataset leave a comment and I will add it.
+## General
+* [Data.gov] US Govt.
+* [Arnetminer] - Research paper citation, author information and collaboration
+* [Yahoo] - yahoo answers, query search logs, etc.
+
 
 
 ## Knowledge Bases
 * [Freebase]
 * [Probase] - Microsoft
 * [Yago]
-* [NELL] - Never Ending Learning CMU
+* [NELL] - Never Ending Learning, CMU
 * [WikiData]
+
 
 
 
 ## NLP
 * [WordNet] - Princeton
-* [ReVerb] - University of Washington OpenIE
+* [ReVerb] - Open Information Extraction project, University of Washington
 * [Setiment Dictionary]
 * [Opinion Corpus]
 
@@ -48,3 +55,6 @@ Know of a useful dataset leave a comment and I will add it.
 [ImageNet]: http://www.image-net.org/
 [Setiment Dictionary]: http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html
 [Opinion Corpus]: http://mpqa.cs.pitt.edu/
+[Data.gov]: https://www.data.gov/
+[Arnetminer]: https://aminer.org/billboard/AMinerNetwork
+[Yahoo]: http://webscope.sandbox.yahoo.com/#datasets
