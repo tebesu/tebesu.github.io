@@ -11,14 +11,15 @@ published: true
 
 Here I list some useful datasets commonly used in research papers. Comment below to get your dataset added.
 
-***-- Last updated August 23 2015***
+***-- Last updated October 2nd 2015***
 
 
-## General
+## General Datasets
 * [Data.gov] US Govt.
 * [Arnetminer] - Research paper citation, author information and collaboration
 * [Yahoo] - yahoo answers, query search logs, etc.
-
+* [Cognitive Computation Group] - University of Illinois at Urban-Champaign
+* [Datahub.io] - Collection of various datasets from Open Knowledge Foundation
 
 
 ## Knowledge Bases
@@ -31,9 +32,10 @@ Here I list some useful datasets commonly used in research papers. Comment below
 
 
 
-## NLP
+## NLP Specific Data Sets
 * [WordNet] - Princeton
 * [ReVerb] - Open Information Extraction project, University of Washington
+* [FrameNet] - UC Berkeley
 * [Setiment Dictionary]
 * [Opinion Corpus]
 
@@ -58,3 +60,6 @@ Here I list some useful datasets commonly used in research papers. Comment below
 [Data.gov]: https://www.data.gov/
 [Arnetminer]: https://aminer.org/billboard/AMinerNetwork
 [Yahoo]: http://webscope.sandbox.yahoo.com/#datasets
+[Cognitive Computation Group]: http://cogcomp.cs.illinois.edu/page/data/
+[Datahub.io]: http://datahub.io/
+[FrameNet]: https://framenet.icsi.berkeley.edu/fndrupal/about
