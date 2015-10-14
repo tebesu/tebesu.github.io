@@ -11,7 +11,7 @@ published: true
 Collection of dataset listings. Good data is always hard to find. Comment below to get your dataset added.
 
 
-***-- Last updated October 6th 2015***
+***-- Last updated October 14th 2015***
 
 
 ## General Datasets
@@ -34,13 +34,17 @@ Collection of dataset listings. Good data is always hard to find. Comment below 
 
 
 ## NLP Specific Data Sets
+* [ACL] - Association for Computational Linguistics, list of public datasets
 * [Cognitive Computation Group] - Various links to datasets in publications, University of Illinois at Urban-Champaign
-* [Arnetminer] - Research paper citation, author information and collaboration
 * [WordNet] - Princeton
 * [ReVerb] - Open Information Extraction project, University of Washington
 * [FrameNet] - UC Berkeley
-* [Setiment Dictionary]
-* [Opinion Corpus]
+* [Setiment Dictionary] -
+* [Opinion Corpus] -
+* [MPQA] - sentiment/opinion mining, University of Pittsburgh
+* [Arnetminer] - Research paper citation, author/collaboration dataset
+
+
 
 
 ## Images
@@ -66,3 +70,5 @@ Collection of dataset listings. Good data is always hard to find. Comment below 
 [Datahub.io]: http://datahub.io/
 [FrameNet]: https://framenet.icsi.berkeley.edu/fndrupal/about
 [San Francisco - Open Data]: https://data.sfgov.org/
+[ACL]: https://aclweb.org/aclwiki/index.php?title=RTE_Knowledge_Resources#Publicly_available_Resources
+[MPQA]: http://mpqa.cs.pitt.edu/
