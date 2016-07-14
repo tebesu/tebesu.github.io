@@ -30,8 +30,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.7.0_71`
 ## Xcode
 Next download the appropriate Xcode package from the [Apple developers website]. Once you download this, simply mount the volume. Open up Xcode -> Preferences -> Locations. Under command line tools you should be able to select the downloaded version of the command line tools as in the picture below. (This can also be done via xcode-select)
 
-![Xcode select]({{ site.url }}/images/xcode_select.png)
-
+![Xcode select]({{ site.url }}/assets/image/xcode_select.png)
 
 Build away....
 
