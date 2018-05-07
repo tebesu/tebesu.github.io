@@ -9,6 +9,7 @@ Travis Ebesu, I am a Ph.D. student at Santa Clara University advised by Dr. [Yi 
 
 
 # Publications
-
-* *Travis Ebesu*, Yi Fang. Neural Citation Network for Context-Aware Citation Recommendation. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval, 2017. (Short Paper) [[PDF]](http://www.cse.scu.edu/~yfang/NCN.pdf) [[Poster]]({{ site.url }}/assets/image/NCN_Poster_SIGIR_2017.pdf) [[Code]](https://github.com/tebesu/NeuralCitationNetwork)
-* *Travis Ebesu*, Yi Fang. Neural Semantic Personalized Ranking for Item Cold-Start Recommendation. In Information Retrieval Journal (IRJ), Springer, 2017. [[PDF]](http://www.cse.scu.edu/~yfang/NSPR.pdf)
+* {:.lispace} *Travis Ebesu*, Bin Shen, Yi Fang. **Collaborative Memory Network for Recommendation Systems**. In Proceedings of the 41th International ACM SIGIR Conference on Research and Development in Information Retrieval, 2018. [[PDF]](http://www.cse.scu.edu/~yfang/Collaborative_Memory_Network.pdf) [[Code]](https://github.com/tebesu/CollaborativeMemoryNetwork)
+* {:.lispace} Suthee Chaidaroon, *Travis Ebesu*, Yi Fang. **Deep Semantic Text Hashing with Weak Supervision**. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval, 2018. [[PDF]](http://www.cse.scu.edu/~yfang/Deep_Semantic_Text_Hashing_Weak_Supervision.pdf)
+* {:.lispace} *Travis Ebesu*, Yi Fang. **Neural Citation Network for Context-Aware Citation Recommendation**. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval, 2017. [[PDF]](http://www.cse.scu.edu/~yfang/NCN.pdf) [[Poster]]({{ site.url }}/assets/image/NCN_Poster_SIGIR_2017.pdf) [[Code]](https://github.com/tebesu/NeuralCitationNetwork)
+* {:.lispace} *Travis Ebesu*, Yi Fang. **Neural Semantic Personalized Ranking for Item Cold-Start Recommendation**. In Information Retrieval Journal (IRJ), Springer, 2017. [[PDF]](http://www.cse.scu.edu/~yfang/NSPR.pdf)
