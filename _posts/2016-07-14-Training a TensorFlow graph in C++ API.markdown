@@ -1,12 +1,14 @@
 ---
 layout: post
 title:  Training a TensorFlow graph in C++ API
-date:   2016-07-14 15:42:13
-categories:
+date:   2016-07-14
+categories: tensorflow
 tags:
 permalink: /posts/Training-a-TensorFlow-graph-in-C++-API
+summary:    Training a TensorFlow model using the C++ API
 published: true
 ---
+
 
 First off, I want to explain my motivation for training the model in C++ and why you may want to do this. TensorFlow is written in C/C++ wrapped with SWIG to obtain python bindings providing speed and usability. However, when a call from python is made to C/C++ e.g. TensorFlow or numpy. Python's global interpreter lock (GIL) must be acquired to perform each call. A few context switches are fine but repeated calls can gradually add up such as performing a true stochastic gradient descent. Moreover, integrating other models with deep learning that do not run effectively on GPUs can require a lot of costly memory transfers. To avoid this I decided to run it directly in C++ providing better performance and finer grain control of GPU memory allocations.
 
