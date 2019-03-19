@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  PyTorch C++ Front End
+title:  PyTorch C++ Frontend Tutorial
 date:   2019-03-18
 categories: tutorial pytorch c++
 permalink: /posts/PyTorch-C++-Frontend
