@@ -1,0 +1,84 @@
+// .social-list {
+//   list-style: none;
+//   > li {
+//     a {
+//       color: $footer-color;
+//       background-image: none;
+//     }
+//   }
+// }
+
+.social {
+  font-size: 1rem;
+
+  > a {
+    cursor: pointer;
+    padding: 1rem;
+    color: $footer-color;
+    background-image: none;
+  }
+
+}
+
+.social a:hover {
+  color: black;
+}
+
+.social .fas, .social .fab {
+  padding-right: 0.2em;
+    // opacity: 0.8;
+    // padding: 0.2em;
+}
+
+// .social-list a.fa {
+// }
+
+.fa-linkedin {
+  color: #0077B5
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-rss {
+  color: #f26522;
+}
+
+
+// .social-list
+
+
+/**
+ * Icons
+ */
+.social-icon-display {
+  > svg {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+
+      path {
+          fill: $dark-gray;
+          // $grey-color;
+      }
+  }
+}
+
+// .social-icons-left, .social-icons-right {
+//   text-align: center;
+//   float: none;
+// }
+//
+// .social-icons {
+//   font-size: 1.25rem;
+//   padding: 0.5em 0 0 0;
+//   width: 100%;
+// }
+//
+//
+// .social-icons iframe[title=Flattr] {
+//   position: relative;
+//   top: 0.1em;
+// }
