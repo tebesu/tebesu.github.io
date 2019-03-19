@@ -2,10 +2,9 @@
 layout: post
 title:  Training a TensorFlow graph in C++ API
 date:   2016-07-14
-categories: tensorflow
-tags:
+categories: tutorial tensorflow c++
 permalink: /posts/Training-a-TensorFlow-graph-in-C++-API
-summary:    Training a TensorFlow model using the C++ API
+summary:    How to train a TensorFlow model in C++
 published: true
 ---
 
