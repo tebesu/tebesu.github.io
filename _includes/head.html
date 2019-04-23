@@ -38,9 +38,8 @@
 
     <!-- Font Awesome ie Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- {% if site.show_social_icons or site.show_sharing_icons %}
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    {% endif %} -->
+    <!-- Google Scholar Icons -->
+    <link rel="stylesheet" href="{{ "css/academicons.min.css" | relative_url }}" type="text/css">
 
     <!-- MathJax -->
     {% if site.enable_mathjax %}
@@ -80,7 +79,7 @@
     <meta name="twitter:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}" />
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
     {% if site.post_preview_image %}
-    <meta name="twitter:image" content="{{ site.url }}/images/me.jpeg" />
+    <!-- <meta name="twitter:image" content="{{ site.url }}/images/me.jpeg" /> -->
     {% endif %}
 
     <!-- Icons -->
