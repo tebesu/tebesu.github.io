@@ -1,23 +1,15 @@
-{% if paginator.total_pages != 1 %}
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    {% if paginator.previous_page %}
-      {% if paginator.page == 2 %}
-        <a class="pagination-item" href="{{ "/" | relative_url }}">{{ site.text.pagination.newer | default: "Newer" }}</a>
-      {% else %}
-        <a class="pagination-item" href="{{ paginator.previous_page_path | relative_url }}">{{ site.text.pagination.newer | default: "Older" }}</a>
-      {% endif %}
+<nav class="pagination" role="navigation">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/#blog" title="Previous Page">← Newer Posts</a>
     {% else %}
-      <span class="pagination-item disabled">{{ site.text.pagination.newer | default: "Newer" }}</span>
+      <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/page{{ paginator.previous_page }}/">← Newer Posts</a>
     {% endif %}
-  </div>
-  <div class="right">
-    {% if paginator.next_page %}
-      <a class="pagination-item" href="{{ paginator.next_page_path | relative_url }}">{{ site.text.pagination.older | default: "Older" }}</a>
-    {% else %}
-      <span class="pagination-item disabled">{{ site.text.pagination.older | default: "Older" }}</span>
-    {% endif %}
-  </div>
-  <div class="pagination-meta">Page {{ paginator.page }} of {{ paginator.total_pages }}</div>
-</div>
-{% endif %}
+  {% endif %}
+
+  <span class="pagination__page-number">Page {{ paginator.page}} of {{ paginator.total_pages}}</span>
+
+  {% if paginator.next_page %}
+    <a rel="next" class="posts older btn small" href="{{ site.baseurl }}/page{{ paginator.next_page }}/">Older Posts →</a>
+  {% endif %}
+</nav>

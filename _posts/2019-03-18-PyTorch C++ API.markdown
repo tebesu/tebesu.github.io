@@ -2,27 +2,26 @@
 layout: post
 title:  PyTorch C++ Frontend Tutorial
 date:   2019-03-18
-categories: tutorial pytorch c++
+categories: []
+tags: [pytorch, c++]
 permalink: /posts/PyTorch-C++-Frontend
 published: true
 summary:    How to define, train and run a PyTorch model using the C++ frontend API.
 ---
 
 
-TLDR; [Github Repo with Code](https://github.com/tebesu/pytorch-cpp-tutorial)
 
-In this blog post, I will demonstrate how to define a model and train it in the PyTorch C++ API front end.
-Since not everyone has access to a DGX-2 to train their [Progressive GAN](https://arxiv.org/abs/1710.10196) in one week.
-I looked for ways to speed up the training of the model. Naturally changing to a lower level language should provide some speed ups.  Unfortunately (or fortunately), deep learning models are compute bound so overhead from acquiring the Python GIL is negligible. My timings show only around a 3% speed up. I'm sure more speed up may be obtained if high levels of preprocessing/IO operations are required or highly optimized C++ code.
+
+In this blog post, I will demonstrate how to define a model and train it in the PyTorch C++ API front end. Since not everyone has access to a DGX-2 to train their [Progressive GAN](https://arxiv.org/abs/1710.10196) in one week. I looked for ways to speed up the training of the model. Naturally changing to a lower level language should provide some speed ups.  Unfortunately (or fortunately), deep learning models are compute bound so overhead from acquiring the Python GIL is negligible. My timings show only around a 3% speed up. I'm sure more speed up may be obtained if high levels of preprocessing/IO operations are required or highly optimized C++ code. TLDR; just show me the [code repo](https://github.com/tebesu/pytorch-cpp-tutorial).
 
 I will not cover the installation/setup for the PyTorch C++ API Front End. Please refer to the official documentation [here](https://pytorch.org/cppdocs/installing.html) and a basic tutorial provided on the PyTorch website [here](https://pytorch.org/tutorials/advanced/cpp_frontend.html).
 
 
 Lets get started by implementing AlexNet as our example. I followed the existing Python implementation of AlexNet in [torchvision ](https://github.com/pytorch/vision/blob/master/torchvision/models/alexnet.py). Similar to the Python version we define a nn.Module with all of the required layers.
 
-<div class="small-spacer"></div>
 
-{% highlight c++ %}
+
+{% highlight c++ linenos %}
 #include <iostream>
 #include <vector>
 
@@ -44,12 +43,12 @@ struct AlexNetImpl : torch::nn::Module {
             dropout(register_module("dropout", nn::Dropout(nn::DropoutOptions(0.5)))){}
 {% endhighlight %}
 
-<div class="small-spacer"></div>
+<br>
+
 Initializing nn modules is a little bit more involved in the C++ version since we need to explicitly register each module rather than Python doing it for us. We defined 5 convolution layers, 3 fully connected layers and a dropout layer in the model constructor. Next, lets define the forward pass which follows line by line to the Python version.
 
-<div class="small-spacer"></div>
 
-{% highlight c++ %}
+{% highlight c++ linenos %}
     torch::Tensor forward(const torch::Tensor& input) {
         auto x = torch::relu(conv1(input));
         x = torch::max_pool2d(x, 3, 2);
@@ -80,7 +79,7 @@ Initializing nn modules is a little bit more involved in the C++ version since w
 };
 {% endhighlight %}
 
-<div class="small-spacer"></div>
+<br>
 
 Next lets wrap the implementation following the standard convention of [Module Ownership](https://pytorch.org/tutorials/advanced/cpp_frontend.html#module-ownership) and the definition can be found here [TORCH_MODULE_IMPL](https://github.com/pytorch/pytorch/blob/4bdaca827cc7b71b33210c0ed4f202540d6719f7/torch/csrc/api/include/torch/nn/pimpl.h#L195). Basically, this wraps our implementation of AlexNetImpl to AlexNet with a shared_ptr and abstracts away any memory management.
 
@@ -95,7 +94,7 @@ TORCH_MODULE_IMPL(AlexNet, AlexNetImpl);
 Now that we finished defining the model we can start on the driver program. First lets check if any CUDA devices are available and set it as our default if possible (otherwise it will run on the CPU).
 <div class="small-spacer"></div>
 
-{% highlight c++ %}
+{% highlight c++ linenos %}
 torch::Device device = torch::kCPU;
 std::cout << "CUDA DEVICE COUNT: " << torch::cuda::device_count() << std::endl;
 if (torch::cuda::is_available()) {
@@ -106,9 +105,8 @@ if (torch::cuda::is_available()) {
 
 <br>
 Next lets initialize our model and an Adam optimizer.
-<div class="small-spacer"></div>
 
-{% highlight c++ %}
+{% highlight c++ linenos %}
 int batch_size = 128;
 int iterations = 1000;
 auto model = AlexNet(224);
@@ -118,9 +116,7 @@ torch::optim::Adam optim(model->parameters(), torch::optim::AdamOptions(1e-3));
 <br>
 Set our model to be in training mode (for dropout) and transfer it to the selected device (GPU if available).
 
-<br>
-
-{% highlight c++ %}
+{% highlight c++ linenos %}
 model->train();
 model->to(device);
 {% endhighlight %}
@@ -129,8 +125,7 @@ model->to(device);
 
 Now the main training loop, we generate random normal tensors as both the inputs (x) and labels (targets) for the model with a simple mean squared error loss. This is just an example we are not doing anything particularly useful. As in a traditional PyTorch training loop, we zero out the gradients, compute the loss and update the parameters (step) with the optimizer.
 
-<div class="small-spacer"></div>
-{% highlight c++ %}
+{% highlight c++ linenos %}
 torch::Tensor x, target, y, loss;
 
 target = torch::randn({batch_size, 1000}, device);
@@ -170,7 +165,6 @@ cmake -DCMAKE_PREFIX_PATH=`pwd`/libtorch .. && make
 ./train
 {% endhighlight %}
 
-
 <br>
 Heres the output.
 
@@ -192,6 +186,7 @@ CUDA is available! Training on GPU.
 
 <br>
 
+The full code can be found in the github repository [here](https://github.com/tebesu/pytorch-cpp-tutorial).
 Note: I also included a image dataset loader with OpenCV as FilenameDataset in the repo.
 
 
