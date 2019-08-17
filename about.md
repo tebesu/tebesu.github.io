@@ -5,7 +5,7 @@ permalink: /about
 ---
 
 
-Travis Ebesu, I will join Walmart Labs as a Senior Data Scientist this summer. I completed my Ph.D. in recommender systems and deep learning at Santa Clara University advised by Dr. [Yi Fang](http://www.cse.scu.edu/~yfang/). My research interests include deep learning and its applications to recommender systems, information retrieval and natural language processing.
+Travis Ebesu - I am currently a Senior Data Scientist at Walmart Labs. I completed my Ph.D. in recommender systems and deep learning at Santa Clara University advised by Dr. [Yi Fang](http://www.cse.scu.edu/~yfang/). My research interests include deep learning and its applications to recommender systems, information retrieval and natural language processing.
 
 <!-- See my publications below or my [Google Scholar Page](https://scholar.google.com/citations?user=h6KUq-QAAAAJ). -->
 
