@@ -3,7 +3,6 @@ title: Travis Ebesu
 # description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
 url: "https://tebesu.github.io/"
 baseurl: ''
-google_analytics: 'UA-6355888-6'
 disqus_shortname: 'tofu2'
 
 author:
